@@ -1,0 +1,280 @@
+:root{
+    --fuente-Principal:'Krub', sans-serif;
+    --verde:#008C9C;
+    --amarillo:#f8bd13;
+    --blanco:#ffff;
+}
+
+/* Configuraciones generales*/
+
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;/* 1rem = 16 aprox*/
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    
+    font-family: var(--fuente-Principal);
+    font-size:1.6rem;
+    background-color:#e9f1f8;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+}
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size:2.8rem;
+    text-align: center;
+    margin: 0;
+}
+
+h2{
+    font-size:2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+h3{
+    text-align: center;
+    color:var(--verde);
+    font-weight: 400;
+}
+
+p{
+    line-height: 1.5;
+}
+.btn{
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.btn__verde{
+    background-color: var(--verde);
+    color:var(--blanco);
+}
+
+.contenedor{
+    width:1000px;
+    margin:0 auto;
+    max-width: 95%;
+}
+
+
+/*Encabezado*/
+
+header h1{
+    padding:1rem;
+}
+
+.fondo__navegacion{
+    background-color: var(--verde);
+}
+
+.menu{
+    padding:.5rem;
+    text-align: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.menu__boton{
+    color:var(--blanco);
+    display: block;
+    padding: .5rem;
+    font-weight: 600;
+}
+.menu__boton:hover{
+    color:yellow;
+}
+
+.btn a{
+    color:var(--blanco);
+}
+
+@media only screen and (min-width:768px){
+    .menu{
+        display: flex;
+        justify-content: space-around ;
+        gap:2rem;
+    }
+}
+
+/* imagen de presentacion */
+
+.img__presentacion{
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) 
+    ,url('../src/hero.jpg');
+    overflow: hidden;
+    height: 350px;
+    background-position: top center;
+    background-size: cover;
+}
+
+.img__presentacion__info{
+    color:white;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+
+.fa-location-dot{
+    color:var(--amarillo);
+    padding:0 1rem;
+    font-size: 3rem;
+}
+
+
+/* info principal */
+
+.info__principal{
+    background-color: var(--blanco);
+    border-radius: 5px;
+    padding:1rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    box-shadow: 7px 8px 22px 0px rgba(0,0,0,0.57);
+}
+
+/* Servicios */
+
+.servicios{
+    list-style: none;
+    padding:0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media only screen and (min-width:768px){
+
+    .servicios{
+        display: flex;
+    }
+}
+
+.servicio{
+    padding:1.5rem;
+}
+
+.servicio p{
+    text-align: justify;
+}
+
+.circle{
+    background-color: var(--amarillo);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.circle i{
+    margin: 0 .5rem;
+}
+
+
+/* contactenos */
+
+.form--contacto{
+    width: 65rem;
+    background-color: rgba(9, 9, 9, 0.733);
+    padding:1rem;
+    margin: 0 auto 2rem auto;
+    border-radius: .5rem;
+    max-width: 95%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.base__campos{
+    border:none;
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+
+.base__campos__titulo{
+    color:var(--amarillo);
+    font-weight: 800;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    max-width: 95%;
+    
+}
+
+.campo{
+    padding: .5rem 0;
+    color:var(--blanco);
+    font-weight: 800;
+}
+
+.campo input,
+.campo textarea{
+    width: 85%;
+    border-radius:.5rem;
+}
+
+textarea{
+    height: 5rem;
+}
+
+.btn__enviar{
+    display: inline-block;
+}
+
+@media only screen and (min-width:450px){
+    .campo{
+        display: flex;
+        gap:1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width:768px){
+
+    .campos{
+        display: flex;
+        gap:2rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .campo{
+        padding: 0;
+    }
+
+    #telefono,
+    #nombre{
+        max-width: 20rem;
+    }
+
+    .campo.correo,
+    .campo.textarea{
+        flex-basis: 100%;
+    }
+}
+
+.btn__enviar{
+    margin: 2rem 0;
+    float: right;
+}
